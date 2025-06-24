@@ -1,0 +1,114 @@
+[gd_scene load_steps=0 format=3 uid="uid://bq337on3qu86g"]
+
+[node name="root" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Spawns" type="Node2D" parent="World"]
+
+[node name="Players" type="Node2D" parent="World/Spawns"]
+
+[node name="Spawn P1" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P2" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P3" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P4" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P5" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P6" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P7" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P8" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P9" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Spawn P10" type="Marker2D" parent="World/Spawns/Players"]
+
+[node name="Minions" type="Node2D" parent="World/Spawns"]
+
+[node name="Spawn M1" type="Marker2D" parent="World/Spawns/Minions"]
+
+[node name="Spawn M2" type="Marker2D" parent="World/Spawns/Minions"]
+
+[node name="Spawn M3" type="Marker2D" parent="World/Spawns/Minions"]
+
+[node name="Spawn M4" type="Marker2D" parent="World/Spawns/Minions"]
+
+[node name="Spawn M5" type="Marker2D" parent="World/Spawns/Minions"]
+
+[node name="Spawn M6" type="Marker2D" parent="World/Spawns/Minions"]
+
+[node name="Mobs" type="Node2D" parent="World/Spawns"]
+
+[node name="Paths" type="Node2D" parent="World"]
+
+[node name="Top" type="Line2D" parent="World/Paths"]
+
+[node name="Mid" type="Line2D" parent="World/Paths"]
+
+[node name="Bot" type="Line2D" parent="World/Paths"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Logos" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Logo" type="TextureRect" parent="UI/Logos"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MainMenu" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Logo" type="TextureRect" parent="UI/MainMenu"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="TextureButton" parent="UI/MainMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lobby" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="TextureButton" parent="UI/Lobby"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameUI" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Attack" type="TextureButton" parent="UI/GameUI"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Results" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Return" type="TextureButton" parent="UI/Results"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Systems" type="Node2D" parent="."]
