@@ -1,0 +1,2 @@
+# AudioManager.gd
+extends Node

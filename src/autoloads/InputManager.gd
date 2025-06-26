@@ -1,0 +1,2 @@
+# InputManager.gd
+extends Node

@@ -1,0 +1,2 @@
+# GameState.gd
+extends Node

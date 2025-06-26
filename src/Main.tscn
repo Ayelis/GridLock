@@ -1,8 +1,15 @@
-[gd_scene load_steps=0 format=3 uid="uid://bq337on3qu86g"]
+[gd_scene load_steps=6 format=3 uid="uid://bq337on3qu86g"]
+
+[ext_resource type="Script" uid="uid://c3d2hjf4x5pi2" path="res://src/UI.gd" id="1_vjwby"]
+[ext_resource type="Texture2D" uid="uid://bv00gq8t4lmff" path="res://resources/textures/button-start.png" id="2_8ec3e"]
+[ext_resource type="Texture2D" uid="uid://5w8nroy4pkba" path="res://resources/textures/button-play.png" id="3_38a0m"]
+[ext_resource type="Texture2D" uid="uid://gou4iu1fxag1" path="res://resources/textures/button-attack.png" id="4_fh42b"]
+[ext_resource type="Texture2D" uid="uid://ds1plae4ij5ew" path="res://resources/textures/button-back.png" id="5_insap"]
 
 [node name="root" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
 
 [node name="World" type="Node2D" parent="."]
 
@@ -55,60 +62,101 @@
 [node name="Bot" type="Line2D" parent="World/Paths"]
 
 [node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Logos" type="Control" parent="UI"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Logo" type="TextureRect" parent="UI/Logos"]
-offset_right = 40.0
-offset_bottom = 40.0
+script = ExtResource("1_vjwby")
 
 [node name="MainMenu" type="Control" parent="UI"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Logo" type="TextureRect" parent="UI/MainMenu"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Start" type="TextureButton" parent="UI/MainMenu"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Lobby" type="Control" parent="UI"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureButton" type="TextureButton" parent="UI/MainMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -207.0
+offset_top = -108.0
+offset_right = 207.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("2_8ec3e")
 
-[node name="Play" type="TextureButton" parent="UI/Lobby"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Lobby" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="UI/Lobby"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_38a0m")
 
 [node name="GameUI" type="Control" parent="UI"]
+visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Attack" type="TextureButton" parent="UI/GameUI"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureButton" type="TextureButton" parent="UI/GameUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("4_fh42b")
 
 [node name="Results" type="Control" parent="UI"]
+visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Return" type="TextureButton" parent="UI/Results"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureButton" type="TextureButton" parent="UI/Results"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("5_insap")
 
 [node name="Systems" type="Node2D" parent="."]
