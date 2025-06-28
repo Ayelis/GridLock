@@ -69,8 +69,20 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MainMenu"]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 246.0
+bbcode_enabled = true
+text = "[b]Main Menu Screen[/b]
+Shop, Inventory, Characters, Armory, Mail, Player, Guild, Review"
 
 [node name="Logo" type="TextureRect" parent="UI/MainMenu"]
 layout_mode = 0
@@ -97,8 +109,19 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Lobby"]
+offset_right = 640.0
+offset_bottom = 246.0
+bbcode_enabled = true
+text = "[b]Lobby Screen[/b]
+Game type, Players, Roles, Chat"
 
 [node name="TextureButton" type="TextureButton" parent="UI/Lobby"]
 layout_mode = 1
@@ -120,8 +143,19 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/GameUI"]
+offset_right = 640.0
+offset_bottom = 246.0
+bbcode_enabled = true
+text = "[b]Game Screen[/b]
+Minimap, Joystick, Skills, Pings, Shop, Settings, Stats"
 
 [node name="TextureButton" type="TextureButton" parent="UI/GameUI"]
 layout_mode = 1
@@ -142,8 +176,19 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Results"]
+offset_right = 640.0
+offset_bottom = 246.0
+bbcode_enabled = true
+text = "[b]Results Screen[/b]
+Teams, Stats/Scores, Upvote, Friend, Review"
 
 [node name="TextureButton" type="TextureButton" parent="UI/Results"]
 layout_mode = 1
