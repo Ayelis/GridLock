@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bq337on3qu86g"]
+[gd_scene load_steps=13 format=4 uid="uid://bq337on3qu86g"]
 
 [ext_resource type="PackedScene" uid="uid://bwc8yaqytsadb" path="res://src/gameworld/PlayerCharacter.tscn" id="1_8ec3e"]
 [ext_resource type="Texture2D" uid="uid://cfq28g2hq0guf" path="res://resources/textures/tileset_Full.png" id="1_fh42b"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://5w8nroy4pkba" path="res://resources/textures/button-play.png" id="3_38a0m"]
 [ext_resource type="Texture2D" uid="uid://gou4iu1fxag1" path="res://resources/textures/button-attack.png" id="4_fh42b"]
 [ext_resource type="Texture2D" uid="uid://ds1plae4ij5ew" path="res://resources/textures/button-back.png" id="5_insap"]
+[ext_resource type="PackedScene" uid="uid://c8cqoivuarumb" path="res://src/gameworld/mobile-ui/VirtualJoystick.tscn" id="8_w32tk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_insap"]
 texture = ExtResource("1_fh42b")
@@ -397,8 +398,8 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
-offset_right = 595.0
-offset_bottom = 265.0
+offset_right = 510.0
+offset_bottom = 62.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
 text = "[b]Main Menu Screen[/b]
@@ -440,8 +441,8 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
-offset_right = 595.0
-offset_bottom = 265.0
+offset_right = 267.0
+offset_bottom = 58.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
 text = "[b]Lobby Screen[/b]
@@ -478,12 +479,15 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
-offset_right = 595.0
-offset_bottom = 265.0
+offset_right = 417.0
+offset_bottom = 61.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
 text = "[b]Game Screen[/b]
 Minimap, Joystick, Skills, Pings, Shop, Settings, Stats"
+
+[node name="VirtualJoystick" parent="UI/GameUI" instance=ExtResource("8_w32tk")]
+layout_mode = 1
 
 [node name="TextureButton" type="TextureButton" parent="UI/GameUI"]
 layout_mode = 1
@@ -492,8 +496,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -40.0
+offset_left = -127.0
+offset_top = -127.0
+offset_right = -20.0
+offset_bottom = -20.0
 grow_horizontal = 0
 grow_vertical = 0
 texture_normal = ExtResource("4_fh42b")
@@ -515,8 +521,8 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
-offset_right = 595.0
-offset_bottom = 265.0
+offset_right = 376.0
+offset_bottom = 67.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
 text = "[b]Results Screen[/b]
