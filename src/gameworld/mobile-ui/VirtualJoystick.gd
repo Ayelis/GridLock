@@ -33,17 +33,17 @@ func _start_drag(pos: Vector2):
 	stick.global_position = origin - stick.size / 2
 	visible = true
 	dragging = true
-	print("Start drag at: ", origin)
+	#print("Start drag at: ", origin)
 
 func _update_drag(pos: Vector2):
 	var offset = pos - origin
 	var clamped = offset.limit_length(max_distance)
 	stick.global_position = origin + clamped - stick.size / 2
 	InputManager.joystick_vector = clamped / max_distance
-	print("Dragging: ", InputManager.joystick_vector)
+	#print("Dragging: ", InputManager.joystick_vector)
 
 func _end_drag():
 	dragging = false
 	visible = false
 	InputManager.joystick_vector = Vector2.ZERO
-	print("End drag")
+	#print("End drag")

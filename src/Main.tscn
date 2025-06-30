@@ -484,7 +484,7 @@ offset_bottom = 61.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
 text = "[b]Game Screen[/b]
-Minimap, Joystick, Skills, Pings, Shop, Settings, Stats"
+[s]Joystick[/s], Minimap, Skills, Stats, Settings, Pings, Shop"
 
 [node name="VirtualJoystick" parent="UI/GameUI" instance=ExtResource("8_w32tk")]
 layout_mode = 1
