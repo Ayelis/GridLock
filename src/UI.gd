@@ -1,3 +1,4 @@
+#/src/UI.gd
 extends CanvasLayer
 
 var screens := []

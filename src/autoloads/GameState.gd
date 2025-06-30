@@ -1,2 +1,2 @@
-# GameState.gd
+#/src/autoloads/GameState.gd
 extends Node

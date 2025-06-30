@@ -1,3 +1,4 @@
+#/src/Map.gd
 extends TileMapLayer
 
 @export var speed := 200.0

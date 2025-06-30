@@ -1,3 +1,4 @@
+#/src/gameworld/mobile-ui/VirtualJoystick.gd
 extends Control
 
 @export var max_distance := 80.0

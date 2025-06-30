@@ -1,2 +1,2 @@
-# AudioManager.gd
+#/src/autoloads/AudioManager.gd
 extends Node

@@ -1,4 +1,4 @@
-# InputManager.gd
+#/src/autoloads/InputManager.gd
 extends Node
 
 @export var joystick_vector := Vector2.ZERO  # Set by mobile UI if used
