@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=13 format=3 uid="uid://bkwfbsqq88xs7"]
+[gd_resource type="AudioBusLayout" load_steps=16 format=3 uid="uid://bkwfbsqq88xs7"]
 
 [sub_resource type="AudioEffectEQ10" id="AudioEffectEQ10_j3pel"]
 resource_name = "EQ10"
@@ -37,7 +37,25 @@ resource_name = "Distortion"
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_n8wo2"]
 resource_name = "Reverb"
-room_size = 1.0
+room_size = 0.5
+damping = 0.7
+wet = 0.2
+
+[sub_resource type="AudioEffectEQ6" id="AudioEffectEQ6_j3pel"]
+resource_name = "EQ6"
+band_db/32_hz = -30.0
+band_db/100_hz = -30.0
+band_db/320_hz = -10.0
+band_db/3200_hz = -10.0
+band_db/10000_hz = -30.0
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_g28q7"]
+resource_name = "Distortion"
+drive = 0.3
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
+resource_name = "PitchShift"
+pitch_scale = 0.95
 
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectEQ10_j3pel")
@@ -92,26 +110,32 @@ bus/5/mute = false
 bus/5/bypass_fx = false
 bus/5/volume_db = 0.0
 bus/5/send = &"SFX"
-bus/6/name = &"Game Voices"
+bus/6/name = &"Game FX"
 bus/6/solo = false
 bus/6/mute = false
 bus/6/bypass_fx = false
 bus/6/volume_db = 0.0
 bus/6/send = &"Master"
-bus/7/name = &"Characters"
+bus/7/name = &"Pings"
 bus/7/solo = false
 bus/7/mute = false
 bus/7/bypass_fx = false
 bus/7/volume_db = 0.0
-bus/7/send = &"Game Voices"
+bus/7/send = &"Game FX"
 bus/8/name = &"Announcer"
 bus/8/solo = false
 bus/8/mute = false
 bus/8/bypass_fx = false
-bus/8/volume_db = 0.0
-bus/8/send = &"Game Voices"
+bus/8/volume_db = -8.00903
+bus/8/send = &"Game FX"
 bus/8/effect/0/effect = SubResource("AudioEffectReverb_n8wo2")
 bus/8/effect/0/enabled = true
+bus/8/effect/1/effect = SubResource("AudioEffectEQ6_j3pel")
+bus/8/effect/1/enabled = true
+bus/8/effect/2/effect = SubResource("AudioEffectDistortion_g28q7")
+bus/8/effect/2/enabled = true
+bus/8/effect/3/effect = SubResource("AudioEffectPitchShift_j3pel")
+bus/8/effect/3/enabled = true
 bus/9/name = &"VoiceChat"
 bus/9/solo = false
 bus/9/mute = false

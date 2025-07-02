@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bq337on3qu86g"]
+[gd_scene load_steps=14 format=4 uid="uid://bq337on3qu86g"]
 
 [ext_resource type="PackedScene" uid="uid://bwc8yaqytsadb" path="res://src/gameworld/PlayerCharacter.tscn" id="1_8ec3e"]
 [ext_resource type="Texture2D" uid="uid://cfq28g2hq0guf" path="res://resources/textures/tileset_Full.png" id="1_fh42b"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://gou4iu1fxag1" path="res://resources/textures/button-attack.png" id="4_fh42b"]
 [ext_resource type="Texture2D" uid="uid://ds1plae4ij5ew" path="res://resources/textures/button-back.png" id="5_insap"]
 [ext_resource type="PackedScene" uid="uid://c8cqoivuarumb" path="res://src/gameworld/mobile-ui/VirtualJoystick.tscn" id="8_w32tk"]
+[ext_resource type="AudioStream" uid="uid://d2wco3sacneh3" path="res://resources/audio/pings/attack_info.ogg" id="11_0vhqb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_insap"]
 texture = ExtResource("1_fh42b")
@@ -543,3 +544,6 @@ grow_vertical = 0
 texture_normal = ExtResource("5_insap")
 
 [node name="Systems" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Systems"]
+stream = ExtResource("11_0vhqb")
